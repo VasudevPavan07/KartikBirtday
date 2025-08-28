@@ -1,0 +1,35 @@
+:root {
+    --rose:#ff6b9f; --violet:#8b5cf6; --bg1:#ffe6f1; --bg2:#e6f3ff;
+  }
+  *{box-sizing:border-box;}
+  body {
+    margin:0; font-family:Poppins, sans-serif;
+    background:linear-gradient(135deg,var(--bg1),var(--bg2));
+    min-height:100vh; padding:20px; text-align:center;
+  }
+  h1,h2 {color:#ef2d65;}
+  h1 {font-family:Sacramento,cursive; font-size:48px;}
+  h2 {font-size:28px; margin:14px 0;}
+  p {line-height:1.6; font-size:16px;}
+  nav {margin:12px 0;}
+  nav a {
+    display:inline-block; margin:6px; padding:10px 14px;
+    border-radius:10px; text-decoration:none;
+    background:var(--rose); color:white; font-weight:600;
+  }
+  nav a:hover {background:#ef2d65;}
+  button {
+    margin:10px; padding:12px 18px; border:0;
+    border-radius:12px; background:var(--violet); color:#fff;
+    font-weight:700; cursor:pointer;
+  }
+  .footer {margin-top:24px; font-size:14px; opacity:0.7;}
+  
+  /* Floating hearts */
+  .hearts{position:fixed; inset:0; pointer-events:none; overflow:hidden;}
+  .heart{position:absolute; width:14px; height:14px; transform:rotate(45deg);
+    background:var(--rose); opacity:.9; animation:float 8s linear infinite;}
+  .heart:before,.heart:after{content:\"\"; position:absolute; width:14px; height:14px; background:var(--rose); border-radius:50%;}
+  .heart:before{left:-7px} .heart:after{top:-7px}
+  @keyframes float{0%{transform:translateY(0) rotate(45deg)} 100%{transform:translateY(-120vh) rotate(45deg)}}
+  
