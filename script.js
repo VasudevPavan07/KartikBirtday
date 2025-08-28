@@ -32,7 +32,7 @@ function makeConfetti(){
     color: ['#ef2d65','#ffb703','#8b5cf6','#22c55e','#06b6d4'][(Math.random() * 5) | 0]
   }));
   if(!anim) animate();
-  setTimeout(()=>confettiPieces=[],6000);
+  setTimeout(()=>confettiPieces=[],8500);
 }
 let anim=null;
 function animate(){
@@ -86,7 +86,7 @@ function burstLove() {
   }
 
   // remove container after animation
-  setTimeout(() => burstContainer.remove(), 10000);
+  setTimeout(() => burstContainer.remove(), 15000);
 }
 
 function playLove() {
