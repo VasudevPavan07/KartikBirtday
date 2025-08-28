@@ -86,8 +86,8 @@ function burstLove() {
   }
 
   // remove container after animation
-  setTimeout(() => burstContainer.remove(), 15000);
-}
+  setTimeout(() => burstContainer.remove(), 20000);
+}0
 
 function playLove() {
   // Play audio
