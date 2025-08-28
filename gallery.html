@@ -16,11 +16,21 @@
   </nav>
 
   <h2>Mini Gallery 📸</h2>
-  <img src="../images/image-1.jpg" alt="memory1" width="220px" height="320px">
-  <img src="../images/image-2.jpg" alt="memory2" width="220px" height="320px">
-  <img src="../images/image-3.jpg" alt="memory3" width="220px" height="320px  ">
 
-  <button onclick="makeConfetti()">Burst of Love 🎉</button>
+  <div class="gallery">
+    <div class="photo-frame">
+      <img src="../images/image-1.jpg" alt="memory1">
+    </div>
+    <div class="photo-frame">
+      <img src="../images/image-2.jpg" alt="memory2">
+    </div>
+    <div class="photo-frame">
+      <img src="../images/image-3.jpg" alt="memory3">
+    </div>
+  </div>
+
+  <audio id="loveAudio" src="bjm.mp3"></audio>
+  <button onclick="playLove()">Burst of Love 🎉</button>
   <script src="script.js"></script>
 </body>
 </html>

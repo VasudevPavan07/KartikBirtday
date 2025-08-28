@@ -21,7 +21,6 @@ resize(); addEventListener('resize',resize);
 let confettiPieces=[];
 function makeConfetti(){
   burstLove();
-
   confettiPieces = Array.from({length:120}, () => ({
     x: Math.random() * canvas.width,
     y: 20,  // 👈 always start at top
@@ -33,7 +32,7 @@ function makeConfetti(){
     color: ['#ef2d65','#ffb703','#8b5cf6','#22c55e','#06b6d4'][(Math.random() * 5) | 0]
   }));
   if(!anim) animate();
-  setTimeout(()=>confettiPieces=[],2200);
+  setTimeout(()=>confettiPieces=[],6000);
 }
 let anim=null;
 function animate(){
@@ -87,6 +86,14 @@ function burstLove() {
   }
 
   // remove container after animation
-  setTimeout(() => burstContainer.remove(), 4000);
+  setTimeout(() => burstContainer.remove(), 10000);
 }
 
+function playLove() {
+  // Play audio
+  const audio = document.getElementById("loveAudio");
+  audio.play();
+
+  // Your confetti function
+  makeConfetti();
+}
